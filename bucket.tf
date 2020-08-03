@@ -139,7 +139,7 @@ resource "aws_s3_bucket" "replica" {
   provider = aws.replica
 
   bucket_prefix = var.replica_bucket_prefix
-  region        = data.aws_region.replica.name
+  # region        = data.aws_region.replica.name
   force_destroy = var.s3_bucket_force_destroy
 
   versioning {
